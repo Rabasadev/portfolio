@@ -3,26 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>/* AI generator styles */
-.ai-generator {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1.25rem;
-  background: #0f0f0f;
-  border: 1px solid #222;
-  border-radius: 8px;
-}
-.ai-generator textarea {
-  width: 100%;
-  min-height: 120px;
-  padding: 0.75rem;
-  border-radius: 6px;
-  background: #0a0a0a;
-  color: #e0e0e0;
-  border: 1px solid #333;
-}
-.ai-generator button { margin-top: 0.75rem; padding: 0.6rem 1rem; background: #00d4ff; color: #000; border: none; border-radius: 6px; cursor: pointer; }
+    <title>Portfolio | Programmer Student</title>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -30,50 +12,50 @@
         }
 
         body {
-            background-color: #0a0a0a;
-            color: #e0e0e0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0e27;
+            color: #e0e0e0;
             line-height: 1.6;
         }
 
         header {
-            background-color: #1a1a1a;
-            padding: 2rem 0;
-            border-bottom: 1px solid #333;
+            background-color: #0f1329;
+            padding: 1rem 0;
             position: sticky;
             top: 0;
+            border-bottom: 2px solid #1e90ff;
             z-index: 100;
         }
 
         nav {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 2rem;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #fff;
+            color: #1e90ff;
         }
 
-        nav ul {
+        .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
 
-        nav a {
+        .nav-links a {
             color: #e0e0e0;
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: #00d4ff;
+        .nav-links a:hover {
+            color: #1e90ff;
         }
 
         .hero {
@@ -86,7 +68,10 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            color: #fff;
+            background: linear-gradient(135deg, #1e90ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero p {
@@ -97,9 +82,9 @@
 
         .cta-button {
             display: inline-block;
-            padding: 1rem 2rem;
-            background-color: #00d4ff;
-            color: #000;
+            padding: 0.8rem 2rem;
+            background-color: #1e90ff;
+            color: #0a0e27;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
@@ -107,42 +92,44 @@
         }
 
         .cta-button:hover {
-            background-color: #00a8cc;
+            background-color: #00d4ff;
         }
 
-        .projects {
+        section {
             max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
+            margin: 0 auto;
+            padding: 4rem 2rem;
         }
 
-        .projects h2 {
+        section h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #fff;
+            color: #1e90ff;
+            border-bottom: 2px solid #1e90ff;
+            padding-bottom: 1rem;
         }
 
-        .project-grid {
+        .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
         .project-card {
-            background-color: #1a1a1a;
-            border: 1px solid #333;
+            background-color: #0f1329;
+            padding: 1.5rem;
             border-radius: 8px;
-            padding: 2rem;
-            transition: transform 0.3s, border-color 0.3s;
+            border-left: 4px solid #1e90ff;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            border-color: #00d4ff;
+            box-shadow: 0 10px 30px rgba(30, 144, 255, 0.2);
         }
 
         .project-card h3 {
-            color: #fff;
+            color: #1e90ff;
             margin-bottom: 0.5rem;
         }
 
@@ -151,13 +138,37 @@
             margin-bottom: 1rem;
         }
 
-        footer {
-            background-color: #1a1a1a;
-            border-top: 1px solid #333;
-            padding: 2rem;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background-color: #0f1329;
+            padding: 1rem;
+            border-radius: 5px;
             text-align: center;
-            color: #b0b0b0;
+            border: 1px solid #1e90ff;
+            color: #1e90ff;
+        }
+
+        footer {
+            background-color: #0f1329;
+            text-align: center;
+            padding: 2rem;
+            border-top: 2px solid #1e90ff;
             margin-top: 4rem;
+        }
+
+        footer a {
+            color: #1e90ff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            color: #00d4ff;
         }
     </style>
 </head>
@@ -165,39 +176,65 @@
     <header>
         <nav>
             <div class="logo">Portfolio</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links">
+              
             </ul>
         </nav>
     </header>
 
-    <section class="hero" id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Crafting digital experiences with elegant design and clean code</p>
-        <a href="#projects" class="cta-button">View My Work</a>
+    <section id="home" class="hero">
+        <h1>Ohjelmistokehitys Opiskelija</h1>
+        <p>Digitaalisten kokemusten luominen tyylikkäällä muotoilulla ja selkeällä koodilla</p>
     </section>
 
-    <section class="projects" id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
+    <section id="taidot">
+        <h2>Taidot</h2>
+        <div class="projects-grid">
             <div class="project-card">
-                <h3>Project One</h3>
-                <p>Description of your project goes here. Highlight key features and technologies used.</p>
+                <h3>Taito 1</h3>
+                <p>It ja muiden elektronisten laitteiden käyttö, purkaminen, kasaus ja huolto </p>
             </div>
             <div class="project-card">
-                <h3>Project Two</h3>
-                <p>Description of your project goes here. Highlight key features and technologies used.</p>
+                <h3>Taito 2</h3>
+                <p>Ohjelmisto kehitys</p>
             </div>
             <div class="project-card">
-                <h3>Project Three</h3>
-                <p>Description of your project goes here. Highlight key features and technologies used.</p>
+                <h3>Taito 3</h3>
+                <p>Vianmääritys muunmuassa. Tietokoneissa</p>
             </div>
         </div>
+    </section> 
+
+    <section id="skills">
+        <h2>tekniset taidot</h2>
+        <div class="skills-grid">
+            <div class="skill-tag">HTML & CSS</div>
+            <div class="skill-tag">Git</div>
+            <div class="skill-tag">Python</div>
+        </div>
     </section>
+
+    <section id="education">
+    <h2>Nykyinen Koulutus</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Tieto- ja viestintätekniikan perustutkinto</h3>
+            <p>Osao Kaukovainion yksikkö, tekniikka | Valmistumisvuosi 2028</p>
+        </div>
+        <div class="project-card">
+            <h3>Peruskoulu</h3>
+            <p>2016-2022 Laitasaaren alakoulu 2022-2025 Muhoksen yläkoulu</p>
+        </div>
+    </div>
+</section>
+
     <footer id="contact">
         <p>&copy; 2026 Akseli Törmänen. All rights reserved.</p>
+        <div style="margin-top: 1.5rem;">
+            <a href="mailto:your-email@example.com">Email</a>
+            <a href="https://t.me/yourusername">Telegram</a>
+            <a href="https://github.com/yourusername">GitHub</a>
+        </div>
     </footer>
 </body>
 </html>
